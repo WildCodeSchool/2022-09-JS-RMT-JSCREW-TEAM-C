@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegeta</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/phone.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +18,28 @@
 
 <body class=" bodyCharacter" onload="selectImgCompetence(0)">
     <header class="header-page">
-        <img class="header-picture" src="./img/veghead.png" alt="maison">
-        <nav class=nav-header>
-            <a class="logo" href="index.html"><img class="logo" src="./pictures/logo/dragonTeam.png" alt=""></a>
-            <div id="mySidenav" class="sidenav">
-                <a id="myLogo-nav-burger" href="index.html"><img src="./src/unknown-2.png" alt=""></a>
-                <a id="closeBtn" href="#" class="close">&times;</a>
+        <nav class="nav-header">
+            <img class="header-picture" src="./src/vegeta.jpg" alt="">
+            <a class="logo" href="index.html"><img class="logo" src="pictures/logo/dragonTeam.png" alt=""></a>
+            
+                    <!-- Menu-burger-->
+        <div class="burger-menu">
+            <div class="burger-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="about_us.html">À PROPOS</a></li>
+                    <li><a href="bulma.html">BULMA</a></li>
+                    <li><a href="gohan.html">GOHAN</a></li>
+                    <li><a href="son_goku.html">SON GOKU</a></li>
+                    <li><a href="trunks.html">TRUNKS</a></li>
+                    <li><a href="vegeta.html">VEGETA</a></li>
+                </ul>
+            </nav>
+        </div>
+
+            <div id="mainNav" class="mainNav">
                 <ul class="text-nav-open">
                     <li>
                         <a href="about_us.html"><strong>À PROPOS</strong></a>
@@ -33,20 +50,13 @@
                     <li><a href="trunks.html"><strong>TRUNKS</strong></a></li>
                     <li><a href="vegeta.html"><strong>VEGETA</strong></a></li>
                 </ul>
-
+                <a title="message" class="ctaButton" href="#form"><i class="fas fa-envelope fa-2x"></i></a>
+                <a title="contact" class="ctaButton" href="#form"><i class="fas fa-comments fa-2x"></i></a>
             </div>
-            <a href="#" id="openBtn">
-                <span class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </a>
-            <a class="ctaButton" href="#form" title="message"><i class="fas fa-envelope fa-2x"></i></a>
-            <a class="ctaButton" href="#form" title="Contact"><i class="fas fa-comments fa-2x"></i></a>
         </nav>
+        
     </header>
-    <section class="presentationPersonnage" id="presentationPersonnage">
+    <section class="presentationPersonnage-vegeta" id="presentationPersonnage">
         <div>
             <h1 id="namePersonnage">VEGETA</h1>
 

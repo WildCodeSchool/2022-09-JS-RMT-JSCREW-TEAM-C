@@ -158,7 +158,7 @@ a.title {
     margin: 0 10px;
 }
 
-/* .charactGohan {
+.charactGohan {
     max-width: 1000px;
     display: flex;
     flex-direction: column;
@@ -169,7 +169,7 @@ a.title {
     text-align: justify;
     line-height: 1.5;
     font-size: 1.2rem;
-} */
+}
 
 
 .team {
