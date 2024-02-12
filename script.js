@@ -1,7 +1,18 @@
 /* Partie de Sylvain*/
+// Dans la fonction toggleMenu
 function toggleMenu() {
-    var menu = document.querySelector('.menu');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    let menu = document.querySelector('.menu');
+
+    // Vérifier si le menu est actuellement affiché
+    if (menu.style.display === 'flex') {
+        // Si le menu est affiché, le cacher et changer la classe
+        menu.style.display = 'none';
+        menu.classList.remove('menu-open'); // Supprimer la classe
+    } else {
+        // Si le menu n'est pas affiché, l'afficher et changer la classe
+        menu.style.display = 'flex';
+        menu.classList.add('menu-open'); // Ajouter la classe
+    }
 }
 
 /* Partie de Gaetan*/
@@ -195,52 +206,59 @@ function toggleCarousel() {
 /* Automatisme du carousel arenes */
 function autoScrollCarousel() {
     const carouselMobile = document.getElementById("carouselPersonnageMobile");
-    const scrollSpeed = 20; // vitesse de défilement selon vos préférences
-    const delay = 8000; // durée entre les défilements selon vos préférences
-    const scrollStep = 1;
 
-    let scrollAmount = 0;
+    // Vérifier si l'élément carouselMobile existe
+    if (carouselMobile) {
+        const scrollSpeed = 20; // vitesse de défilement selon vos préférences
+        const delay = 8000; // durée entre les défilements selon vos préférences
+        const scrollStep = 1;
 
-    // Fonction pour faire défiler le carousel
-    function scroll() {
-        scrollAmount += scrollStep;
+        let scrollAmount = 0;
 
-        // Si le défilement a atteint la largeur d'un élément, réinitialiser le défilement
-        if (scrollAmount >= carouselMobile.children[0].offsetWidth) {
-            scrollAmount = 0;
+        // Fonction pour faire défiler le carousel
+        function scroll() {
+            // Vérifier si carouselMobile.children existe et a une longueur supérieure à zéro
+            if (carouselMobile.children && carouselMobile.children.length > 0) {
+                scrollAmount += scrollStep;
 
-            // Définissez un délai avant le prochain défilement
-            setTimeout(function () {
-                // Si nous sommes à la dernière image, revenez à la première image sans défilement brusque
-                if (carouselMobile.scrollLeft + carouselMobile.clientWidth === carouselMobile.scrollWidth) {
-                    carouselMobile.scrollLeft = 0;
+                // Si le défilement a atteint la largeur d'un élément, réinitialiser le défilement
+                if (scrollAmount >= carouselMobile.children[0].offsetWidth) {
+                    scrollAmount = 0;
+
+                    // Définissez un délai avant le prochain défilement
+                    setTimeout(function () {
+                        // Si nous sommes à la dernière image, revenez à la première image sans défilement brusque
+                        if (carouselMobile.scrollLeft + carouselMobile.clientWidth === carouselMobile.scrollWidth) {
+                            carouselMobile.scrollLeft = 0;
+                        }
+                    }, delay);
+                } else {
+                    carouselMobile.scrollLeft += scrollStep;
                 }
-            }, delay);
-        } else {
-            carouselMobile.scrollLeft += scrollStep;
+
+                // Obtenez l'index de l'image actuellement visible
+                const currentIndex = Math.round(carouselMobile.scrollLeft / carouselMobile.clientWidth);
+
+                // Mettez à jour le texte de compétence en fonction de l'image actuellement visible
+                selectImgCompetence(currentIndex);
+            }
         }
 
-        // Obtenez l'index de l'image actuellement visible
-        const currentIndex = Math.round(carouselMobile.scrollLeft / carouselMobile.clientWidth);
-        
-        // Mettez à jour le texte de compétence en fonction de l'image actuellement visible
-        selectImgCompetence(currentIndex);
+        // setInterval pour appeler la fonction scroll à intervalles réguliers
+        const scrollInterval = setInterval(scroll, scrollSpeed);
+
+        // événement pour réinitialiser le défilement lorsque le carousel est touché
+        carouselMobile.addEventListener("touchstart", function (event) {
+            clearInterval(scrollInterval); // défilement automatique lorsqu'il est touché
+
+            event.preventDefault();
+        }, { passive: true });
+
+        carouselMobile.addEventListener("touchend", function () {
+            // Redémarrer le défilement automatique après le relâchement du toucher
+            scrollInterval = setInterval(scroll, scrollSpeed);
+        });
     }
-
-    // setInterval pour appeler la fonction scroll à intervalles réguliers
-    const scrollInterval = setInterval(scroll, scrollSpeed);
-
-    // événement pour réinitialiser le défilement lorsque le carousel est touché
-    carouselMobile.addEventListener("touchstart", function (event) {
-        clearInterval(scrollInterval); // défilement automatique lorsqu'il est touché
-
-        event.preventDefault();
-    }, {passive: true});
-
-    carouselMobile.addEventListener("touchend", function () {
-        // Redémarrer le défilement automatique après le relâchement du toucher
-        scrollInterval = setInterval(scroll, scrollSpeed);
-    });
 }
 
 // fonction après le chargement du DOM
