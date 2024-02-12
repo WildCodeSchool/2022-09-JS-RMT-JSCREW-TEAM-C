@@ -252,12 +252,40 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    font-size: 12px;
     line-height: 1.5;
     padding: 10px;
     margin-top: 30rem ;
   }
+  .presentationPersonnage-vegeta{
+    background-color: rgb(29, 29, 29);
+    color: whitesmoke;
+    margin-top: 20rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
 
+  }
+
+  .charactGohan {
+    margin-bottom: 2rem;
+  }
+
+  .charactGohan p {
+    margin-bottom: 20px;
+  }
+
+  .charactVegeta {
+    margin-bottom: 2rem;
+  }
+
+  .charactVegeta p {
+    margin-bottom: 20px;
+  }
+
+  .msgPersonnage {
+    font-size: 12px;
+    padding: 20px;
+  }
 }
