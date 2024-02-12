@@ -131,6 +131,9 @@
 
   }
 
+  .presentationPersonnage{
+  font-size:12px ;
+  }
   #competencesPersonnage {
     margin-top: 2rem;
     border-radius: 0px;
