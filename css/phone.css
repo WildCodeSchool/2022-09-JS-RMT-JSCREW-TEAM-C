@@ -106,7 +106,7 @@
   .team-text {
     font-size: 12px;
     padding: 10px;
-    margin-top: 3rem;
+    margin-top: 10rem;
 
   }
 
@@ -115,7 +115,6 @@
   }
 
   .team-text p {
-    margin-bottom: 20px;
     text-align: center;
 
   }
@@ -146,9 +145,11 @@
 
   .presentationPersonnage{
   font-size:12px ;
+  margin: 9rem 0 0 0;
+  border-radius: 0px;
   }
   #competencesPersonnage {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     border-radius: 0px;
   }
 
@@ -170,6 +171,7 @@
     width: 100%;
     height: auto;
     overflow-x: auto;
+    margin-bottom: 3rem;
   }
 
   .carousel-mobile .carousel {
@@ -201,6 +203,10 @@
 
   #carouselPersonnageMobile {
     display: block;
+  }
+
+  .contact{
+    margin: 0;
   }
 
   .form-wrapper {
@@ -288,6 +294,18 @@
 
   }
 
+  #presentationPersonnage-goku{
+    padding-top: 20rem ;
+  }
+
+#presentationPersonnage-gohan {
+  margin-top: 25rem;
+}
+
+#presentationPersonnage-bulma{
+  margin-top: 7.5rem;
+}
+
   .charactGohan {
     margin-bottom: 2rem;
   }
@@ -308,4 +326,3 @@
     font-size: 12px;
     padding: 20px;
   }
-}
