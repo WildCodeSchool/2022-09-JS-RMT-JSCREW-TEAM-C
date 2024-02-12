@@ -127,10 +127,10 @@ a.title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 4rem auto;
     background-color: #141313;
     color: #f6f2f2;
-    padding-top: 200px ;
+    padding: 30px 20px 0 20px ;
     text-align: center;
     line-height: 1.5;
     font-size: 1.2rem;
@@ -171,9 +171,6 @@ a.title {
     font-size: 1.2rem;
 }
 
-.msgPersonnage{
-    padding: 3rem;
-}
 
 .team {
     width: 100%;
