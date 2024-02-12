@@ -44,34 +44,43 @@
     margin: 6px 0;
     transition: 0.4s;
   }
-
+  
   .menu {
-    background-color: rgb(66, 65, 65);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    display: none;
   }
+/* Ajoutez une règle pour cibler le menu seulement lorsque la classe menu-open est présente */
+.menu.menu-open {
+  background-color: rgb(52, 54, 54);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.menu.menu-open ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .menu li {
-    padding: 15px;
-    text-align: center;
-  }
+.menu.menu-open li {
+  padding: 15px;
+  text-align: center;
+}
 
-  .menu a {
-    color: #fff;
-    text-decoration: none;
-  }
+.menu.menu-open a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  .menu a:hover {
-    text-decoration: underline;
-  }
+.menu.menu-open a:hover {
+  text-decoration: underline;
+}
+
+/* Cachez le menu par défaut */
+
+/* Autres styles restants inchangés */
 
 
   #mainNav {
