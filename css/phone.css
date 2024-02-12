@@ -7,17 +7,18 @@
   .header-page {
     height: auto;
     padding-bottom: 6rem;
+    position: relative;
   }
-
+  
   .header-picture {
     height: auto;
     object-fit: cover;
-    position: absolute;
   }
 
 
   .logo {
-    margin-left: 2rem;
+    width: 200px;
+    padding: 0;
   }
 
   /* Menu burger par défaut */
@@ -26,6 +27,8 @@
     display: block;
     width: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .burger-icon {
@@ -34,7 +37,8 @@
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 2.5rem 2.5rem 0 0;
+  };
   }
 
   .bar {
@@ -182,6 +186,13 @@
   }
 
   .carousel-mobile .imgAreneMobile {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .carousel-mobile .imgCompetence {
     width: 400px;
     height: 200px;
     object-fit: cover;
