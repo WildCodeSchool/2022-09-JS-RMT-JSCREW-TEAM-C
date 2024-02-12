@@ -1,0 +1,247 @@
+/* css phone*/
+
+@media screen and (max-width: 600px) {
+
+  /* header*/
+
+  .header-page {
+    height: auto;
+    padding-bottom: 6rem;
+  }
+
+  .header-picture {
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+  }
+
+
+  .logo {
+    margin-left: 2rem;
+  }
+
+  /* Menu burger par défaut */
+
+  .burger-menu {
+    display: block;
+    width: 100%;
+    position: absolute;
+  }
+
+  .burger-icon {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .menu {
+    background-color: rgb(66, 65, 65);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    text-decoration: underline;
+  }
+
+
+  #mainNav {
+    display: none;
+  }
+
+  .text-nav-open {
+    display: none;
+  }
+
+  .ctaButton {
+    display: none;
+  }
+
+  .team {
+    height: auto;
+  }
+
+  .team-text {
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 3rem;
+
+  }
+
+  .team-text h1 {
+    margin-bottom: 20px;
+  }
+
+  .team-text p {
+    margin-bottom: 20px;
+    text-align: center;
+
+  }
+
+
+  .team-picture {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+    overflow: auto;
+  }
+
+  .team-picture-div {
+    display: flex;
+
+  }
+
+
+  .team-picture-div img {
+    width: 100px;
+    height: 100px;
+    margin: 2rem 10px;
+    border: 2px solid #fff;
+
+  }
+
+  #competencesPersonnage {
+    margin-top: 2rem;
+    border-radius: 0px;
+  }
+
+  .nameCompetence {
+    font-size: 18px;
+  }
+
+  .msgCompetence {
+    font-size: 12px;
+  }
+
+
+
+  #carousselPersonnage {
+    display: none;
+  }
+
+  .carousel-mobile {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .carousel-mobile .carousel {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .carousel-mobile .carousel__item {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    padding: 0 10px;
+  }
+
+  .carousel-mobile .imgAreneMobile {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #carouselPersonnageMobile {
+    display: block;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .form-wrapper form h2 {
+    font-size: 18px;
+    margin-bottom: 2rem;
+  }
+
+  .form-wrapper form p {
+    display: none
+  }
+
+  .form-wrapper form input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .form-input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .form-input::placeholder {
+    font-size: 12px;
+  }
+
+  #textarea textarea {
+    height: 300px;
+    margin: 2rem 0;
+  }
+
+  .form-wrapper form button {
+    width: 20%;
+    padding: 10px;
+    color: rgb(248, 241, 248);
+    background-color: rgb(49, 49, 252);
+    border-radius: 10px;
+  }
+
+  .form-wrapper form button:hover {
+    background-color: blanchedalmond;
+    color: black;
+  }
+
+
+  .nav-footer h2 {
+    font-size: 18px;
+  }
+
+  .nav-footer a {
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+
+}

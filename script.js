@@ -1,16 +1,7 @@
 /* Partie de Sylvain*/
-let sidenav = document.getElementById("mySidenav");
-let openBtn = document.getElementById("openBtn");
-let closeBtn = document.getElementById("closeBtn");
-
-openBtn.onclick = openNav;
-closeBtn.onclick = closeNav;
-
-function openNav() {
-    sidenav.classList.add("active");
-}
-function closeNav() {
-    sidenav.classList.remove("active");
+function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
 
 /* Partie de Gaetan*/
@@ -185,5 +176,74 @@ document.getElementById("form").addEventListener("submit", function (event) {
     alert(message);
 });
 
+function toggleCarousel() {
+    const windowWidth = window.innerWidth;
 
-/* Partie de Joy*/
+    if (windowWidth <= 600) {
+        document.getElementById('carousselPersonnage').style.display = 'none';
+        document.getElementById('carouselPersonnageMobile').style.display = 'flex';
+        document.getElementById('carousselCompetence').style.display = 'none';
+    } else {
+        document.getElementById('carousselPersonnage').style.display = 'flex';
+        document.getElementById('carouselPersonnageMobile').style.display = 'none';
+        document.getElementById('carousselCompetence').style.display = 'flex';
+    }
+}
+
+
+
+/* Automatisme du carousel arenes */
+function autoScrollCarousel() {
+    const carouselMobile = document.getElementById("carouselPersonnageMobile");
+    const scrollSpeed = 20; // vitesse de défilement selon vos préférences
+    const delay = 8000; // durée entre les défilements selon vos préférences
+    const scrollStep = 1;
+
+    let scrollAmount = 0;
+
+    // Fonction pour faire défiler le carousel
+    function scroll() {
+        scrollAmount += scrollStep;
+
+        // Si le défilement a atteint la largeur d'un élément, réinitialiser le défilement
+        if (scrollAmount >= carouselMobile.children[0].offsetWidth) {
+            scrollAmount = 0;
+
+            // Définissez un délai avant le prochain défilement
+            setTimeout(function () {
+                // Si nous sommes à la dernière image, revenez à la première image sans défilement brusque
+                if (carouselMobile.scrollLeft + carouselMobile.clientWidth === carouselMobile.scrollWidth) {
+                    carouselMobile.scrollLeft = 0;
+                }
+            }, delay);
+        } else {
+            carouselMobile.scrollLeft += scrollStep;
+        }
+
+        // Obtenez l'index de l'image actuellement visible
+        const currentIndex = Math.round(carouselMobile.scrollLeft / carouselMobile.clientWidth);
+        
+        // Mettez à jour le texte de compétence en fonction de l'image actuellement visible
+        selectImgCompetence(currentIndex);
+    }
+
+    // setInterval pour appeler la fonction scroll à intervalles réguliers
+    const scrollInterval = setInterval(scroll, scrollSpeed);
+
+    // événement pour réinitialiser le défilement lorsque le carousel est touché
+    carouselMobile.addEventListener("touchstart", function (event) {
+        clearInterval(scrollInterval); // défilement automatique lorsqu'il est touché
+
+        event.preventDefault();
+    }, {passive: true});
+
+    carouselMobile.addEventListener("touchend", function () {
+        // Redémarrer le défilement automatique après le relâchement du toucher
+        scrollInterval = setInterval(scroll, scrollSpeed);
+    });
+}
+
+// fonction après le chargement du DOM
+window.addEventListener("load", function () {
+    autoScrollCarousel();
+});
