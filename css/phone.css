@@ -1,16 +1,22 @@
-/* css phone*/
+/* CSS for phone size */
+@media only screen and (max-width: 600px) {
 
-@media screen and (max-width: 600px) {
-
-  /* header*/
-
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+  }
+  /* header */
   .header-page {
     height: auto;
-    padding-bottom: 6rem;
     position: relative;
   }
-  
+
   .header-picture {
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
@@ -18,81 +24,72 @@
 
   .logo {
     width: 200px;
-    padding: 0;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+    z-index: 1;
   }
 
-  /* Menu burger par défaut */
-
+  .menu{
+    display: none;
+  }
+  /* Default burger menu */
   .burger-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    position: absolute;
   }
-
+  
   .burger-icon {
     width: 100%;
     height: 100%;
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
-    padding: 2.5rem 2.5rem 0 0;
-  };
+    align-items: center;
+    
   }
 
-  .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  
-  .menu {
-    display: none;
-  }
-/* Ajoutez une règle pour cibler le menu seulement lorsque la classe menu-open est présente */
-.menu.menu-open {
-  background-color: rgb(52, 54, 54);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.menu.menu-open ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu.menu-open li {
-  padding: 15px;
-  text-align: center;
-}
-
-.menu.menu-open a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu.menu-open a:hover {
-  text-decoration: underline;
-}
-
-/* Cachez le menu par défaut */
-
-/* Autres styles restants inchangés */
-
-
-  #mainNav {
-    display: none;
+  .burger-icon i {
+    color: black;
+    font-size: 2rem;
+    padding: 10px 10px 0 0;
   }
 
-  .text-nav-open {
-    display: none;
+  /* Add a rule to target the menu only when the menu-open class is present */
+  .menu.menu-open {
+    background-color: rgb(52, 54, 54);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .menu.menu-open ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu.menu-open li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .menu.menu-open a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu.menu-open a:hover {
+    text-decoration: underline;
   }
 
   .ctaButton {
@@ -101,78 +98,140 @@
 
   .team {
     height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .team-text {
     font-size: 12px;
     padding: 10px;
-    margin-top: 10rem;
-
   }
 
   .team-text h1 {
     margin-bottom: 20px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    padding: 0 10px;
+    text-align: center;
   }
 
   .team-text p {
-    text-align: center;
-
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    padding: 0 10px;
   }
 
-
   .team-picture {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     width: 100%;
+    height: 500px;
     padding-top: 2rem;
     overflow: auto;
+    background-color: rgb(31, 31, 31);
   }
 
   .team-picture-div {
     display: flex;
-
+    align-items: center;
+    justify-content: center;
   }
-
 
   .team-picture-div img {
     width: 100px;
     height: 100px;
     margin: 2rem 10px;
     border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    padding: 0 5px;
+    background-color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
   }
 
-  .presentationPersonnage{
-  font-size:12px ;
-  margin: 9rem 0 0 0;
-  border-radius: 0px;
+  #presentation{
+    margin-top: 1rem;
   }
+
+  .presentationPersonnage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 5px;
+    background-color: rgb(31, 31, 31);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 1px ;
+  }
+
+  .photo img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #fff;
+    padding: 0 5px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+
   #competencesPersonnage {
-    /* margin-top: 2rem; */
-    border-radius: 0px;
+    margin-top: 3rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background-color: rgb(31, 31, 31);
   }
 
-  .nameCompetence {
-    font-size: 18px;
+  #nameCompetence {
+    color:antiquewhite;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-align: center;
+
   }
 
   .msgCompetence {
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: antiquewhite;
+    font-weight: 600;
+    padding: 0 10px;
     font-size: 12px;
   }
-
-
 
   #carousselPersonnage {
     display: none;
   }
 
   .carousel-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: auto;
     overflow-x: auto;
-    margin-bottom: 3rem;
-  }
+    background-color: rgb(31, 31, 31);
+    padding: 0 10px;
+    }
 
   .carousel-mobile .carousel {
     display: flex;
@@ -185,6 +244,7 @@
     height: 100%;
     flex-shrink: 0;
     padding: 0 10px;
+    
   }
 
   .carousel-mobile .imgAreneMobile {
@@ -201,26 +261,29 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  #carouselPersonnageMobile {
-    display: block;
-  }
 
-  .contact{
-    margin: 0;
+  .contact {
+    margin: 20px 0;
   }
 
   .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 0 10px;
+    background-color: rgb(31, 31, 31);
     width: 100%;
     font-size: 12px;
   }
 
   .form-wrapper form h2 {
     font-size: 18px;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin: 20px 0;
   }
 
   .form-wrapper form p {
-    display: none
+    display: none;
   }
 
   .form-wrapper form input {
@@ -230,10 +293,13 @@
     padding: 10px;
     margin: 10px 0;
     width: 100%;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgb(31, 31, 31);
   }
 
   .form-input:focus {
-    border: none;
+    border-bottom: 1px solid #fff;
     outline: none;
   }
 
@@ -242,11 +308,36 @@
   }
 
   #textarea textarea {
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgb(31, 31, 31);
     height: 300px;
     margin: 2rem 0;
   }
 
+  .button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto;
+  }
+
   .form-wrapper form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 12px;
+    cursor: pointer;
     width: 20%;
     padding: 10px;
     color: rgb(248, 241, 248);
@@ -260,19 +351,45 @@
   }
 
 
+  .nav-footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 29, 29);
+    padding: 10px;
+  }
+
   .nav-footer h2 {
     font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+    
   }
 
   .nav-footer a {
     font-size: 12px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .nav-footer a:hover {
+    color:coral;
   }
 
   .copyright {
     font-size: 12px;
+    font-weight: 600;
+    padding: 10px 10px;
+    text-align: center;
+    color: #fff;
   }
 
-  .presentationPersonnage-trunck{
+  .presentationPersonnage-trunck {
     background-color: rgb(29, 29, 29);
     color: whitesmoke;
     width: 100%;
@@ -281,48 +398,14 @@
     align-items: center;
     line-height: 1.5;
     padding: 10px;
-    margin-top: 30rem ;
   }
-  .presentationPersonnage-vegeta{
+
+  .presentationPersonnage-vegeta {
     background-color: rgb(29, 29, 29);
     color: whitesmoke;
-    margin-top: 20rem ;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-
   }
-
-  #presentationPersonnage-goku{
-    padding-top: 20rem ;
-  }
-
-#presentationPersonnage-gohan {
-  margin-top: 25rem;
 }
-
-#presentationPersonnage-bulma{
-  margin-top: 7.5rem;
-}
-
-  .charactGohan {
-    margin-bottom: 2rem;
-  }
-
-  .charactGohan p {
-    margin-bottom: 20px;
-  }
-
-  .charactVegeta {
-    margin-bottom: 2rem;
-  }
-
-  .charactVegeta p {
-    margin-bottom: 20px;
-  }
-
-  .msgPersonnage {
-    font-size: 12px;
-    padding: 20px;
-  }
