@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Team</title>
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="./css/tablet.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,45 +15,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https : // fonts.googleapis.com/css2 ? _ _ _ _ _ _ 0,900;1,100 & display=swap" rel="feuille de style">
+    <script src="https://kit.fontawesome.com/a546a81ffd.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="selectImg(0)">
     <header class="header-page">
-        <img class="header-picture" src="./pictures/home.png" alt="maison">
+        <a class="logo" href="index.html"><img class="logo" src="pictures/logo/dragonTeam.png" alt=""></a>
         <nav class="nav-header">
-            <a class="logo" href="index.html"><img src="./src/unknown-2.png" alt=""></a>
-            <div id="mySidenav" class="sidenav">
-                <a id="myLogo-nav-burger" href="index.html"><img src="./src/unknown-2.png" alt=""></a>
-                <a id="closeBtn" href="#" class="close">&times;</a>
-                <ul class="text-nav-open">
-                    <li>
-                        <a href="about_us.html"><strong>À PROPOS</strong></a>
-                    </li>
-                    <li><a href="bulma.html"><strong>BULMA</strong></a></li>
-                    <li><a href="gohan.html"><strong>GOHAN</strong></a></li>
-                    <li><a href="son_goku.html"><strong>SON GOKU</strong></a></li>
-                    <li><a href="trunks.html"><strong>TRUNKS</strong></a></li>
-                    <li><a href="vegeta.html"><strong>VEGETA</strong></a></li>
-                </ul>
+            <img class="header-picture" src="./pictures/home/home.png" alt="">
+            
+                    <!-- Menu-burger-->
+            <div class="burger-menu">
+                <div class="burger-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a class="active" href="index.html"><strong>ACCUEIL</strong></a></li>
+                        <li><a href="about_us.html">À PROPOS</a></li>
+                        <li><a href="bulma.html">BULMA</a></li>
+                        <li><a href="gohan.html">GOHAN</a></li>
+                        <li><a href="son_goku.html">SON GOKU</a></li>
+                        <li><a href="trunks.html">TRUNKS</a></li>
+                        <li><a href="vegeta.html">VEGETA</a></li>
+                    </ul>
+                    <div class="social-media">
+                        <a title="message" class="ctaButton" href="#form"><i class="fas fa-envelope fa-2x"></i></a>
+                        <a title="contact" class="ctaButton" href="#form"><i class="fas fa-comments fa-2x"></i></a>
+        
+                    </div>
 
+                </nav>
             </div>
-            <a href="#" id="openBtn">
-                <span class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </a>
-            <a class="ctaButton" href="#form" title="Contact"><img src="./pictures/cta.png" alt=""></a>
-            <a class="ctaButton2" href="#form" title="Contact"><img src="./pictures/contactcta.png" alt=""></a>
+
         </nav>
+        
     </header>
 
     <section class="team">
         <div class="team-text">
-            <h1>Personnages</h1>
-            <p>Dragon Ball est riche d'une foisonnante galerie de personnages. L'apparition progressive de nouveaux personnages se fait souvent au détriment de plus anciens qui passent au second plan voire disparaissent (en particulier quand le niveau de puissance des adversaires se met à croître très au-delà de leurs capacités de simples Terriens). Quelques-uns cependant tiennent une place importante tout au long de l'histoire.</p>
+            <h2>Personnages</h2>
+            <p>Dragon Ball est riche d'une foisonnante galerie de personnages. L'apparition progressive de nouveaux
+                personnages se fait souvent au détriment de plus anciens qui passent au second plan voire disparaissent
+                (en particulier quand le niveau de puissance des adversaires se met à croître très au-delà de leurs
+                capacités de simples Terriens). Quelques-uns cependant tiennent une place importante tout au long de
+                l'histoire.</p>
         </div>
         <div class="team-picture">
             <div class="team-picture-div"><a href="./trunks.html">
@@ -76,12 +84,12 @@
     </section>
     <section id="competencesPersonnage">
         <div>
-            <h2 classe="nameCompetence" id="nameCompetence"></h2>
+            <h2 class="nameCompetence" id="nameCompetence"></h2>
             <p class="msgCompetence" id="msgCompetence"></p>
         </div>
     </section>
-    <section class="skills" id="carousselPersonnage">
 
+ <section class="skills" id="carousselPersonnage">
         <div class="container">
             <input type="radio" name="slider" id="item-1" checked>
             <input type="radio" name="slider" id="item-2">
@@ -106,13 +114,34 @@
                 </label>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- carousel pour version mobile -->
+     <section class="skills carousel-mobile" id="carouselPersonnageMobile">
+        <div class="carousel" id="carousel">
+            <div class="carousel__item">
+                <img class="imgAreneMobile" src="src/La_tout_muscle.jpg" alt="La tour du muscle">
+            </div>
+            <div class="carousel__item">
+                <img class="imgAreneMobile" src="src/Namek.png" alt="Namek">
+            </div>
+            <div class="carousel__item">
+                <img class="imgAreneMobile" src="src/capital_ouest.jpg" alt="Capital de l'ouest">
+            </div>
+            <div class="carousel__item">
+                <img class="imgAreneMobile" src="src/palais_des_dieux.png" alt="Le palais des dieux">
+            </div>
+            <div class="carousel__item">
+                <img class="imgAreneMobile" src="src/mont_paozu.jpg" alt="mont paozu">
+            </div>
+        </div>
+    </section> 
 
     <section class="contact">
 
         <div class="form-wrapper">
             <form id="form" method="post" name="postform" action="email.php">
-                <h1 class="form-title">Contact</h1>
+                <h2 class="form-title">Contact</h2>
 
                 <div class="form-input-grid">
                     <div>
@@ -147,43 +176,43 @@
                     </div>
                 </div>
 
-
                 <div class="form-input-max flexbox-left">
                     <div class="button-wrapper">
-
-                        <button id="form-button" type="submit"
-                            class="button btn-primary"><strong>Envoyer</strong></button>
+                        <button id="form-button" type="submit" class="button btn-primary"><strong>Envoyer</strong></button>
                     </div>
                 </div>
             </form>
         </div>
     </section>
-  <footer>
-    <div class="nav-footer">
-      <div class="nav-footer-perso">
-        <h2><a href="about_us.html">À propos</a></h2>
-        <hr />
-        <h2>Personnages</h2>
-        <ul class="nav-footer-text">
-          <li><a href="bulma.html">Bulma</a></li>
-          <li><a href="gohan.html">Gohan</a></li>
-          <li><a href="son_goku.html">Son Goku</a></li>
-          <li><a href="trunks.html">Trunks</a></li>
-          <li><a href="vegeta.html">Vegeta</a></li>
-        </ul>
-      </div>
-      <div class="nav-footer-perso">
-        <h2>Sites partenaires</h2>
-        <ul class="nav-footer-text">
-          <li><a href="https://dragonballsuper-france.fr/">Dragon Ball Super France</a></li>
-          <li><a href="https://www.db-z.com/">DB.Z.com</a></li>
-          <li><a href="https://dragonball.fandom.com/fr/">Wiki Dragon Ball</a></li>
-          <li><a href="https://www.dragonballsuper-vostfr.com/">Dragon Ball Super VOSTFR</a></li>
-          <li><a href="https://goku-shop.fr/">Goku Shop</a></li>
-        </ul>
-      </div>
-  </footer>
-  
+    <footer>
+        <div class="nav-footer">
+            <div class="nav-footer-perso">
+                <h2><a href="about_us.html">À propos</a></h2>
+                <hr />
+                <h2>Personnages</h2>
+                <ul class="nav-footer-text">
+                    <li><a href="bulma.html">Bulma</a></li>
+                    <li><a href="gohan.html">Gohan</a></li>
+                    <li><a href="son_goku.html">Son Goku</a></li>
+                    <li><a href="trunks.html">Trunks</a></li>
+                    <li><a href="vegeta.html">Vegeta</a></li>
+                </ul>
+            </div>
+            <div class="nav-footer-perso">
+                <h2 class="footer-partenaire">Sites partenaires</h2>
+                <ul class="nav-footer-text">
+                    <li><a href="https://dragonballsuper-france.fr/">Dragon Ball Super France</a></li>
+                    <li><a href="https://www.db-z.com/">DB.Z.com</a></li>
+                    <li><a href="https://dragonball.fandom.com/fr/">Wiki Dragon Ball</a></li>
+                    <li><a href="https://www.dragonballsuper-vostfr.com/">Dragon Ball Super VOSTFR</a></li>
+                    <li><a href="https://goku-shop.fr/">Goku Shop</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2022</p>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 
 </body>

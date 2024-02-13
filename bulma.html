@@ -7,45 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulma</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/phone.css">
+    <link rel="stylesheet" href="./css//tablet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https : // fonts.googleapis.com/css2 ? _ _ _ _ _ _ 0,900;1,100 & display=swap" rel="feuille de style">
+    <script src="https://kit.fontawesome.com/a546a81ffd.js" crossorigin="anonymous"></script>
 </head>
 
 <body class=" bodyCharacter" onload="selectImgCompetence(0)">
     <header class="header-page">
-        <img class="header-picture" src="./src/Bulma_Header.jpg" alt="bulma">
-        <nav class=nav-header>
-            <a class="logo" href="index.html"><img src="./src/unknown-2.png" alt=""></a>
-            <div id="mySidenav" class="sidenav">
-                <a id="myLogo-nav-burger" href="index.html"><img src="./src/unknown-2.png" alt=""></a>
-                <a id="closeBtn" href="#" class="close">&times;</a>
-                <ul class="text-nav-open">
-                    <li>
-                        <a href="about_us.html"><strong>À PROPOS</strong></a>
-                    </li>
-                    <li><a href="bulma.html"><strong>BULMA</strong></a></li>
-                    <li><a href="gohan.html"><strong>GOHAN</strong></a></li>
-                    <li><a href="son_goku.html"><strong>SON GOKU</strong></a></li>
-                    <li><a href="trunks.html"><strong>TRUNKS</strong></a></li>
-                    <li><a href="vegeta.html"><strong>VEGETA</strong></a></li>
-                </ul>
-
+        <a class="logo" href="index.html"><img class="logo" src="pictures/logo/dragonTeam.png" alt=""></a>
+        <nav class="nav-header">
+            <img class="header-picture" src="./src/Bulma_intelligente.jpeg" alt="">
+            
+                    <!-- Menu-burger-->
+            <div class="burger-menu">
+                <div class="burger-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html"><strong>ACCUEIL</strong></a></li>
+                        <li><a href="about_us.html">À PROPOS</a></li>
+                        <li><a href="bulma.html">BULMA</a></li>
+                        <li><a href="gohan.html">GOHAN</a></li>
+                        <li><a href="son_goku.html">SON GOKU</a></li>
+                        <li><a href="trunks.html">TRUNKS</a></li>
+                        <li><a href="vegeta.html">VEGETA</a></li>
+                    </ul>
+                    <div>
+                        <a title="message" class="ctaButton" href="#form"><i class="fas fa-envelope fa-2x"></i></a>
+                        <a title="contact" class="ctaButton" href="#form"><i class="fas fa-comments fa-2x"></i></a>
+        
+                    </div>
+                </nav>
             </div>
-            <a href="#" id="openBtn">
-                <span class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </a>
-            <a class="ctaButton" href="#form" title="Contact"><img src="./pictures/cta.png" alt=""></a>
-            <a class="ctaButton2" href="#form" title="Contact"><img src="./pictures/contactcta.png" alt=""></a>
+
         </nav>
+        
     </header>
-    <section class="presentationPersonnage" id="presentationPersonnage">
+    <section class="presentationPersonnage" id="presentationPersonnage-bulma">
         <div>
             <h1 id="namePersonnage">BULMA</h1>
 
@@ -53,7 +56,7 @@
         <div class="photo">
             <img src="src/Bulma_Profil.png" alt="bulma">
         </div>
-        <div class="charactGohan" id="charactGohan">
+        <div class="charact" id="charactGohan">
             <p><strong>Nom</strong> : Bulma</p>
             <p><strong>Naissance</strong> : 733</p>
             <p><strong>Origine</strong> : Terre</p>
@@ -84,7 +87,6 @@
     </section>
     <section id="competencesPersonnage">
         <div>
-            <h1>COMPETENCES</h1>
             <h2 classe="nameCompetence" id="nameCompetence"></h2>
             <p class="msgCompetence" id="msgCompetence"></p>
         </div>
@@ -115,11 +117,33 @@
             </div>
         </div>
     </section>
+
+        <!-- carousel pour version mobile -->
+        <section class="skills carousel-mobile" id="carouselPersonnageMobile">
+            <div class="carousel" id="carousel">
+                <div class="carousel__item">
+                    <img class="imgCompetence" src="src/Bulma_autres.jpeg" alt="autre">
+                </div>
+                <div class="carousel__item">
+                    <img class="imgCompetence" src="src/Bulma_force.jpeg" alt="force">
+                </div>
+                <div class="carousel__item">
+                    <img class="imgCompetence" src="src/Bulma_DragonRadar.jpeg" alt="dragonradar">
+                </div>
+                <div class="carousel__item">
+                    <img class="imgCompetence" src="src/Bulma_pilote.jpg" alt="pilotage">
+                </div>
+                <div class="carousel__item">
+                    <img class="imgCompetence" src="src/Bulma_intelligente.jpeg" alt="intelligence">
+                </div>
+            </div>
+        </section>
+    
     <section class="contact">
 
         <div class="form-wrapper">
             <form id="form" method="post" name="postform" action="email.php">
-                <h1 class="form-title">Contact</h1>
+                <h2 class="form-title">Contact</h2>
 
                 <div class="form-input-grid">
                     <div>
