@@ -1,5 +1,5 @@
 /* CSS for phone size */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
 
   *{
     margin: 0;
@@ -107,7 +107,7 @@
     padding: 10px;
   }
 
-  .team-text h1 {
+  .team-text h2 {
     margin-bottom: 20px;
     font-size: 18px;
     color: #000;
